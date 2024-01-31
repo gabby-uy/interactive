@@ -1,0 +1,50 @@
+/* mall page.css*/
+    body{
+      margin-left:20vw;
+      margin-right:20vw;
+    }
+    p {
+      font-family:"Arial Narrow";
+      font-size:1.5em;
+    
+    }
+     h1 {
+      font-family:"Helvetica Neue";
+      font-size: 6em;
+      font-weight:3pt;
+      transform: rotate(-5deg);
+      display:inline-block;
+      text-transform: lowercase;
+      line-height: .8em;
+      text-align: center;
+
+    }
+  .credits { 
+      font-family:"Arial Narrow";
+      font-size:1em;
+      text-align: center;
+    }
+    .mallname{
+      font-family: 'Helvetica Neue';
+      transform: rotate(-5deg);
+      display: inline-block;
+      text-transform: uppercase;
+      font-size:1.1em;
+      letter-spacing: .05em;
+      position:relative;
+      top:-5px;
+      line-height: 1em
+    }
+    a{
+      font-family: 'Comic Sans MS';
+      font-size: .9em;
+    }
+    #author {
+    font-family:"Snell Roundhand";
+      font-size:1em;
+    }
+    #date {
+      font-family:"Bradley Hand";
+      font-size:1em;
+    }
+    }
