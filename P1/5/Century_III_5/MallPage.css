@@ -9,25 +9,24 @@
     
     }
      h1 {
-      font-family:"Helvetica Neue";
-      font-size: clamp(1em, 8vw, 6em);
-      font-weight:3pt;
-      transform: rotate(-5deg);
-      display:block;
-      text-transform: lowercase;
-      line-height: .8em;
+      font-family:"Luminari";
+      font-size: 6em;
+      transform: rotate(4deg);
+      display:inline-block;
+      text-transform: uppercase;
+      letter-spacing: .05em;
       text-align: center;
-      max-width:100%;
+      width: 100%;
 
     }
   .credits { 
       font-family:"Arial Narrow";
-      font-size:1em;
+      font-size:2em;
       text-align: center;
     }
     .mallname{
-      font-family: 'Helvetica Neue';
-      transform: rotate(-5deg);
+      font-family: 'Luminari';
+      transform: rotate(4deg);
       display: inline-block;
       text-transform: uppercase;
       font-size:1.1em;
