@@ -1,35 +1,38 @@
 /* mall page.css*/
     body{
-      margin-left:300px;
-      margin-right:300px;
     }
-    p {
-      font-family:"Arial Narrow";
-      font-size:1.5em;
-      padding: .5em 0em;
-      background-color:ghostwhite;
-    }
+
+    /* HEADER */
      h1 {
       font-family:"Brush Script MT";
-      font-size: 6em;
-      transform: rotate(-10deg);
+      font-size: clamp(1em, 10vw, 6em);
+      font-weight:3pt;
+      transform: rotate(-7deg);
       display:block;
+      line-height: 1em;
       text-align: center;
-      background-color: rgb(0,255,255);
-      border: 10px dotted #000;
-      margin-top:200px;
+      max-width:100%;
+      margin-left:20vw;
+      margin-right:20vw;
+    }
 
-    }
-    .credits { 
+
+
+    /* BODY TEXT STYLES */
+  .bodytext{
       font-family:"Arial Narrow";
-      font-size:2em;
-      background-color: yellow;
+      font-size:1.5em;
+      margin-left:20vw;
+      margin-right:20vw;
+  }
+  .credits { 
+      font-family:"Arial Narrow";
+      font-size:1em;
       text-align: center;
-      display:inline-block;
     }
-    .mallname{
-      font-family: 'Brush Script Std';
-      transform: rotate(-10deg);
+  .mallname{
+      font-family: 'Brush Script MT';
+      transform: rotate(-7deg);
       display: inline-block;
       font-size:1.1em;
       position:relative;
@@ -48,3 +51,10 @@
       font-family:"Bradley Hand";
       font-size:1em;
     }
+
+  /* IMAGES */
+
+  .fish{
+    width:20%;
+    height: auto;
+  }
