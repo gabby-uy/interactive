@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click for Love</title>
+
+  <style>
+
+  .text{
+    color:black;
+    text-align: center;
+    font-size: 15px;
+    font-family: courier;
+    margin-left:10vw;
+    margin-right:10vw;
+    padding-top: 500vh;
+    padding-bottom: 500vh;
+    display:block;
+  }
+
+ h5{
+    color:black;
+    text-align: center;
+    font-size: 1vw;
+    padding-bottom: 5vw;
+    style:normal;
+  }
+
+
+h1{
+    display:block;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding-top: 40vh;
+    font-family:  Courier;
+    letter-spacing: .05em;
+    margin-left:10vw;
+    margin-right:10vw;
+}
+
+.subheading{
+    display:block;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-top: 25vh;
+    font-family:  Courier;
+    letter-spacing: .05em;
+    margin-left:10vw;
+    margin-right:10vw;
+    font-weight: bold;
+
+}
+
+body{
+  background-color: rgba(255,100,200,.1);
+
+@media screen and (max-width: 1024px){
+  h5{
+    font-size: 2vw;
+    padding-bottom: 2.5vw;
+  }
+  .text{
+    font-size: 30px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+}
+
+}
+  </style>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var popups = [
+        "Message_1.html",
+        "Message_2.html",
+        "Message_3.html",
+        "Message_4.html",
+        "Message_5.html",
+        "Message_6.html",
+        "Message_7.html",
+        "Message_8.html",
+        "Message_9.html",
+        "Message_10.html",
+        "Message_11.html",
+        "Message_12.html",
+        "Message_13.html",
+        "Message_14.html",
+        "Message_15.html",
+        "Message_16.html",
+        "Message_17.html",
+        "Message_18.html",
+        "Message_19.html",
+        "Message_20.html",
+        "Message_21.html",
+        "Message_22.html",
+        "Message_23.html",
+        "Message_24.html",
+        "Message_25.html",
+        "Message_26.html",
+        "Message_27.html",
+        "Message_28.html",
+        "Message_29.html",
+        "Message_30.html",
+        "Message_31.html",
+        "Message_32.html",
+        "Message_33.html",
+        "Message_34.html",
+        "Message_35.html",
+        "Message_36.html",
+        "Message_37.html",
+        "Message_38.html",
+        "Message_39.html",
+        "Message_40.html",
+        "Message_41.html",
+        "Message_42.html",
+        "Message_43.html",
+        "Message_44.html",
+        "Message_45.html",
+        "Message_46.html",
+        "Message_47.html",
+        "Message_48.html",
+        "Message_49.html",
+        // Add more local file paths as needed
+    ];
+
+    function openRandomPopup() {
+        // Select a random file path from the popups array
+        var randomIndex = Math.floor(Math.random() * popups.length);
+        var randomPopupFilePath = popups[randomIndex];
+
+        var screenWidth = window.screen.width;
+        var screenHeight = window.screen.height;
+        var randomX = Math.floor(Math.random() * (screenWidth - 400)); // Adjust 400 based on popup width
+        var randomY = Math.floor(Math.random() * (screenHeight - 400)); // Adjust 400 based on popup height
+
+        // Open the random popup window
+        window.open(randomPopupFilePath, "_blank", "width=400,height=400,left=" + randomX + ",top=" + randomY);
+
+      
+    }
+
+    document.body.addEventListener("click", openRandomPopup);
+});
+</script>
+
+
+</head>
+<body style=""> 
+
+
+<h1> Design as love language <br><br><br><br><br> Click anywhere for love </h1>
+
+</body>

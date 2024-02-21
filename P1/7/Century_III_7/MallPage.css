@@ -1,0 +1,160 @@
+/* mall page.css*/
+    body{
+
+    }
+
+    /* BLINKING */
+    @keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+    /* HEADER */
+     h1 {
+      font-family:"Luminari";
+      font-size: clamp(1em, 6vw, 6em);
+      font-weight:3pt;
+      transform: rotate(4deg);
+      display:block;
+      line-height: 1em;
+      letter-spacing: .05em;
+      text-align: center;
+      max-width:100%;
+      margin-left:20vw;
+      margin-right:20vw;
+      text-transform: uppercase;
+      color:rgb(255,255,0);
+      border: .5vw dotted rgb(255,255,0);
+      background-color: rgb(255,0,255);
+    }
+
+    h1:hover{
+    animation: blink 0.1s infinite;
+    }
+
+  /* BANNER ADS */
+  .bannerad{
+    padding:5vh;
+    margin:auto;
+    max-width: 728px;
+    max-height: 90px;
+    overflow: hidden;
+    display:flex;
+  }
+
+  .bannerad img {
+    width: 100%; 
+    object-position: center;
+    filter: saturate(1000%); 
+  }
+
+ /* SKYSCRAPER ADS */
+  .bodycontainer{
+    display:flex;
+    justify-content: space-between;
+  }
+  }
+  .skyscraperads {
+    display: flex;
+    flex-direction: column;
+    max-width: 10vw;
+    gap: auto;
+  }
+
+  .skyscraperad {
+    padding:1vw;
+  }
+
+    /* BODY TEXT STYLES */
+  .bodytext{
+      margin-left:10vw;
+      margin-right:10vw;
+      flex-grow: 2;
+      font-family:"Arial Narrow";
+      font-size:1.5em;
+      color:rgb(255,10,255);
+      background-color:greenyellow;
+      padding:20px;
+      padding-top:0px;
+      padding-bottom:0px;
+  }
+
+  .credits { 
+      font-family:"Arial Narrow";
+      font-size:1.2em;
+      text-align: center;
+      color:rgb(0,255,0);
+      padding-bottom: 5vh;
+      margin-left:20vw;
+      margin-right:20vw;
+      
+    }
+
+  a{
+    color:rgb(255,0,255);
+    
+  }
+  a visited{
+    color:inherit;
+  }
+  a:hover {
+      color: rgb(255,0,0);
+      animation: blink 0.1s infinite;
+  }
+  a:active {
+      color: inherit;
+  }
+
+  .mallname{
+      font-family: 'Brush Script MT';
+      transform: rotate(-7deg);
+      display: inline-block;
+      font-size:1.1em;
+      position:relative;
+      top:-5px;
+      line-height: 1em
+    }
+    #author {
+    font-family:"Snell Roundhand";
+      font-size:1em;
+      background-color: rgb(0,0,255);
+    }
+    #date {
+      font-family:"Bradley Hand";
+      font-size:1em;
+      background-color: rgb(0,0,255);
+    }
+    #source{
+      font-family: 'Comic Sans MS';
+      font-size: .9em;
+      background-color: rgb(0,0,255);    
+    }
+
+  /* IMAGES */
+  .gif{
+
+  }
+  .gif:hover{
+    animation: blink 0.1s infinite;
+  }
+
+
+@media screen and (max-width: 768px) {
+  .body{
+    flex-direction: column;
+  }
+  .bodycontainer {
+    flex-direction: column; /* Change to a single column layout */
+  }
+  .skyscraperads {
+  order:1;
+ }
+ .skyscraperad {
+  order:1;
+  display: none;
+
+ }
+
+
+

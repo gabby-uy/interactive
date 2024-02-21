@@ -1,0 +1,145 @@
+/* mall page.css*/
+    body{
+
+    }
+
+    /* HEADER */
+     h1 {
+      font-family:"Helvetica Neue";
+      font-size: clamp(1em, 8vw, 6em);
+      font-weight:3pt;
+      transform: rotate(-5deg);
+      display:block;
+      text-transform: lowercase;
+      line-height: .8em;
+      text-align: center;
+      margin-left:20vw;
+      margin-right:20vw;
+      max-width:100%;
+      color:rgb(255,0,0);
+      border: .5vw ridge rgb(255,0,0);
+      padding:1vw;
+      background-color: black;
+    }
+
+  /* BANNER ADS */
+  .bannerad{
+    padding:5vh;
+    margin:auto;
+    max-width: 728px;
+    max-height: 90px;
+    height:auto;
+    overflow: hidden;
+    display:flex;
+  }
+
+  .bannerad img {
+    width: 100%; 
+    height:auto;
+    object-position: center;
+    filter: saturate(1000%); 
+  }
+
+ /* SKYSCRAPER ADS */
+  .bodycontainer{
+    display:flex;
+    justify-content: space-between;
+    padding-left:1vw;
+    padding-right:1vw;
+  }
+  }
+  .skyscraperads {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skyscraperad {
+    margin: 0;
+  }
+
+    /* BODY TEXT STYLES */
+  .bodytext{
+      margin-left:10vw;
+      margin-right:10vw;
+
+      flex-grow: 2;
+      font-family:"Arial Narrow";
+      font-size:1.5em;
+      color:black;
+      background-color:red;
+      padding:20px;
+      padding-top:0px;
+      padding-bottom:0px;
+      border:5px dotted;
+  }
+  .credits { 
+      font-family:"Arial Narrow";
+      font-size:1.2em;
+      text-align: center;
+      color:rgb(255,0,255);
+      padding-bottom: 5vh;
+      margin-left:20vw;
+      margin-right:20vw;     
+    }
+
+  a{
+    color:rgb(255,0,255);
+  }
+  a visited{
+    color:inherit;
+  }
+  a:hover {
+      color: rgb(255,0,0);
+  }
+  a:active {
+      color: inherit;
+  }
+
+  .mallname{
+      font-family: 'Brush Script MT';
+      transform: rotate(-7deg);
+      display: inline-block;
+      font-size:1.1em;
+      position:relative;
+      top:-5px;
+      line-height: 1em
+    }
+    #author {
+    font-family:"Snell Roundhand";
+      font-size:1em;
+      background-color: darkred;
+    }
+    #date {
+      font-family:"Bradley Hand";
+      font-size:1em;
+      background-color: darkred;
+    }
+    #source{
+      font-family: 'Comic Sans MS';
+      font-size: .9em;
+      background-color: darkred;    
+    }
+
+  /* IMAGES */
+
+  .fish{
+    width:20%;
+    height: auto;
+  }
+
+
+@media screen and (max-width: 768px) {
+  .body{
+    flex-direction: column;
+  }
+  .bodycontainer {
+    flex-direction: column; /* Change to a single column layout */
+  }
+  .skyscraperads {
+  order:1;
+ }
+ .skyscraperad {
+  order:1;
+  display: none;
+
+ }
