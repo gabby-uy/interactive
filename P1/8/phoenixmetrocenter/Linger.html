@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linger</title>
+  <style>
+    img{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      margin: 0;
+      object-fit: cover;
+    }
+  </style>
+
+    <script>
+        function closeWindow() {
+      window.close(); // Close the window
+        } 
+
+        function openWindowWithAudio(url, name, width, height) {
+            // Open a new window with specified dimensions
+            var newWindow = window.open(url, name, 'width=' + width + ',height=' + height);
+            
+            // Play audio
+            var audio = new Audio('Linger.mp3');
+            audio.play();
+            
+            // Return the newly opened window
+            return newWindow;
+        }
+        
+        // Automatically play audio when the page loads
+        window.onload = function() {
+            var audio = new Audio('Linger.mp3'); 
+            audio.play();
+        };
+  </script>
+
+</head>
+<img src="images/cranberries.jpg" onmouseover="closeWindow()">
+
+<body> 

@@ -30,10 +30,10 @@
       background-color: darkgreen;
       padding-top: 15px;
     }
-
+/*
     h1:hover{
     animation: blink 0.1s infinite;
-    }
+    }*/
 
   /* BANNER ADS */
   .bannerad{
@@ -140,11 +140,77 @@
 
   /* IMAGES */
   .gif{
-
   }
+
+
+/*
   .gif:hover{
     animation: blink 0.1s infinite;
   }
+*/
+
+  .homebutton{
+  width:calc(120px);
+  height:auto;
+  position: fixed;
+  top:10px;
+  left:10px;
+  z-index: 2;
+  filter: saturate(500%);
+  filter:drop-shadow(5px 5px);
+}
+
+  .backbutton{
+  width:auto;
+  height:auto;
+  position: fixed;
+  bottom:10px;
+  left:10px;
+  z-index: 2;
+    filter: saturate(500%);
+    font-family:"Arial Black";
+    text-transform: uppercase;
+    letter-spacing: -.01em;
+    font-size: 30px;
+    line-height: 16px;
+    background-color: yellow;
+    padding:5px;
+    filter:drop-shadow(5px 5px);
+    border: 1px solid black;
+
+}
+
+  .nextbutton{
+  width:auto;
+  height:auto;
+  position: fixed;
+  bottom:10px;
+  right:10px;
+  z-index: 2;
+    filter: saturate(500%);
+    font-family:"Arial Black";
+    text-transform: uppercase;
+    letter-spacing: -.01em;
+    font-size: 30px;
+    line-height: 16px;
+    background-color: yellow;
+    padding:5px;
+    filter:drop-shadow(5px 5px);
+    border: 1px solid black;
+
+}
+
+.homebutton:hover{
+  animation: blink 0.1s infinite;
+}
+
+.nextbutton:hover{
+  animation: blink 0.1s infinite;
+}
+
+.backbutton:hover{
+  animation: blink 0.1s infinite;
+}
 
 
 @media screen and (max-width: 768px) {

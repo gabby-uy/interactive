@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mall Obituaries</title>
+    <style>
+
+    /* BLINKING */
+    @keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+        img {
+            max-width: 100%;
+            cursor: pointer;
+        }
+
+        img:hover {
+        }
+
+        div {
+            display:inline-block;
+        }
+
+::selection{
+    background-color: black;
+    color:yellow;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    animation: blink 0.1s infinite;
+}
+.header{
+}
+     h1{
+        font-family:"Arial Black";
+        text-transform: uppercase;
+        font-size:10vw;
+        letter-spacing: -.05em;
+        font-weight: bolder;
+        text-align: center;
+        margin: 0px;
+        text-shadow: 
+        -.1vw -.1vw 0 black,
+        .1vw -.1vw 0 black,
+        -.1vw .1vw 0 black,
+        .1vw .1vw 0 black;
+     }
+
+.allmalls{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+ .mallcontainer{
+        display:inline-block;
+        /*width: 320px;*/
+        padding:10px;
+        margin: 0 auto; /* This centers the div horizontally */
+    }
+         .mallimg{
+            display: block;
+            border: 2px solid black;
+            
+            }  
+
+         .mallname{
+            padding-top:10px;
+            display: block;
+            font-family:"Arial Black";
+            text-transform: uppercase;
+            letter-spacing: -.01em;
+            font-size: 16px;
+            line-height: 16px;
+            }  
+
+         .malladdress{
+            display: block;
+            font-family:"Arial";
+            font-size: 16px;
+            line-height: 16px;
+            } 
+
+.quote{
+    font-family:"Arial Narrow";
+    font-size: 24px;
+    line-height: 22px;
+    text-align: justify-all;
+}
+
+.quotecredit{
+    font-family: "Brush Script STD";
+    font-weight: normal;
+    padding-top:20px;
+    font-size: 24px;
+    line-height: 22px;
+    text-align: justify-all;
+}
+
+.colophon{
+    font-family: "Arial Black";
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+@media screen and (min-width: 768px) {
+.allmalls{
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+.mallcontainer{
+        display:inline-block;
+        width: 320px;
+        padding:10px;
+        margin: 0 auto; /* This centers the div horizontally */
+  }
+
+@media screen and (min-width: 1024px) {
+.allmalls{
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+.mallcontainer{
+        display:inline-block;
+        width: 320px;
+        padding:10px;
+        margin: 0 auto; /* This centers the div horizontally */
+  }
+
+  h1{
+
+  }
+  .bodycontainer {
+    flex-direction: column; /* Change to a single column layout */
+  }
+    </style>
+
+</head>
+
+<body style="background-color:yellow">
+
+<!-- HEADER -->
+<h1> Mall Obituaries</h1>
+
+<!-- NAVIGATION -->
+
+
+
+<div class="allmalls">
+
+<!-- JOAN DIDION -->
+<div class="mallcontainer">
+    <div class="quote">"In the literature of shopping centers these would be described as impulse purchases, but the impulse here was obscure. I do not wear hats, nor do I like caramel corn. I do not use nail enamel. Yet flying back across the Pacific I regretted only the toaster."</div>
+    <div class="quotecredit"> <span style="font-weight:bold">Joan Didion </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On the Mall</div>
+</div>
+
+<!-- STAMFORD TOWN CENTER -->
+<div class="mallcontainer">
+<a href="stamfordtowncenter/stamfordtowncenter.html">
+    <img class = "mallimg" src="Stamford_Town_Center.png">
+
+    <div class = "mallname"> 
+        Stamford Town Center
+    </div>
+
+    <div class = "malladdress">
+        100 Greyrock Pl <br>
+        Stamford <br>
+        CT 06901
+    </div>
+</a>
+</div>
+
+<!-- CENTURY III MALL -->
+<div class="mallcontainer">
+    <a href="centuryiii/centuryiii.html">
+    <img class = "mallimg" src="Century_III.png">
+    <div class = "mallname"> 
+        Century III Mall 
+    </div>
+    <div class = "malladdress">
+        9971 Mountain View Dr <br>
+        West Mifflin <br>
+        PA 15122
+    </div>
+    </a>
+</div>
+
+
+<!-- WESTFIELD ANNAPOLIS -->
+<div class="mallcontainer">
+<a href="westfieldannapolis/westfieldannapolis.html">
+    <img class = "mallimg" src="Westfield_Annapolis.png">
+
+    <div class = "mallname"> 
+        Westfield Annapolis
+    </div>
+
+    <div class = "malladdress">
+        2002 Annapolis Mall Rd <br>
+        Annapolis <br>
+        MD 21401
+    </div>
+</a>
+</div>
+
+<!-- PHOENIX METROCENTER -->
+<div class="mallcontainer">
+<a href="phoenixmetrocenter/phoenixmetrocenter.html">
+    <img class = "mallimg" src="Phoenix_Metrocenter.png">
+
+    <div class = "mallname"> 
+        Phoenix Metrocenter
+    </div>
+
+    <div class = "malladdress">
+        9617 N Metro Pkwy W<br>
+        Phoenix <br>
+        AZ 85051
+    </div>
+</a>
+</div>
+
+<!-- VALLEY VIEW -->
+<div class="mallcontainer">
+<a href="valleyview/valleyview.html">
+    <img class = "mallimg" src="Valley_View.png">
+
+    <div class = "mallname"> 
+        Valley View Mall
+    </div>
+
+    <div class = "malladdress">
+        13331 Preston Rd <br>
+        Dallas <br>
+        TX 75240
+    </div>
+</a>
+</div>
+
+<!-- CHAPEL SQUARE MALL -->
+<div class="mallcontainer">
+<a href="chapelsquare/chapelsquare.html">
+    <img class = "mallimg" src="Chapel_Square_Mall.png">
+
+    <div class = "mallname"> 
+        Chapel Square Mall
+    </div>
+
+    <div class = "malladdress">
+        Church & Chapel St <br>
+        New Haven <br>
+        CT 06510
+    </div>
+</a>
+</div>
+
+<!-- PIER 17 -->
+<div class="mallcontainer">
+<a href="pier17/pier17.html">
+    <img class = "mallimg" src="Pier_17.png">
+
+    <div class = "mallname"> 
+        Pier 17
+    </div>
+
+    <div class = "malladdress">
+        89 South St <br>
+        New York <br>
+        NY 10038
+    </div>
+</a>
+</div>
+
+<!-- SUNSET PLACE -->
+<div class="mallcontainer">
+<a href="sunsetplace/sunsetplace.html">    
+    <img class = "mallimg" src="Sunset_Place.png">
+
+    <div class = "mallname"> 
+        The Shops at Sunset Place
+    </div>
+
+    <div class = "malladdress">
+        5701 Sunset Dr<br>
+        South Miami<br>
+        FL 33143
+    </div>
+</a>
+</div>
+
+<!-- RANDALL PARK MALL -->
+<div class="mallcontainer">
+<a href="randallpark/randallpark.html">
+    <img class = "mallimg" src="Randall_Park.png">
+
+    <div class = "mallname"> 
+        Randall Park Mall
+    </div>
+
+    <div class = "malladdress">
+        21001 N Miles Rd <br>
+        North Randall <br>
+        OH 44128
+    </div>
+</a>
+</div>
+
+<!-- HAWLEY LANE MALL -->
+<div class="mallcontainer">
+<a href="hawleylane/hawleylane.html">
+    <img class = "mallimg" src="Hawley_Lane.png">
+
+    <div class = "mallname"> 
+        Hawley Lane Mall 
+    </div>
+
+    <div class = "malladdress">
+        100 Hawley Ln <br>
+        Trumbull <br>
+        CT 06611
+    </div>
+</a>
+</div>
+
+<!--COLOPHON-->
+
+<div class="mallcontainer">
+    <div class="colophon">
+     <span style="font-family:'Snell Roundhand';font-weight:bold; font-size:22px;text-transform: none;"><a href="https://gabrielleuy.com/">By Gabby Uy </a></span><br>
+     Spring 2024   
+    </div>
+    </div>
+</div>
+
+</div>
+</body>
+
+</html>
