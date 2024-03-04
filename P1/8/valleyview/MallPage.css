@@ -166,6 +166,7 @@
   }
   a:hover {
       color: rgb(0,200,255);
+      animation: blink 0.1s infinite;
   }
   a:active {
       color: inherit;
@@ -267,11 +268,9 @@
 }
 
 .backbutton:hover{
-  animation: blink 0.1s infinite;
 }
 
 .nextbutton:hover{
-  animation: blink 0.1s infinite;
 }
 
 /* MEDIA QUERIES */
