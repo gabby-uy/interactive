@@ -89,7 +89,7 @@
       text-transform: uppercase;
       color:rgb(255,255,0);
       border: .5vw dotted rgb(255,255,0);
-      background-color: rgb(0,0,0);
+      background-color: rgb(0,0,255);
     }
   /* BANNER ADS */
   .bannerad{
@@ -132,17 +132,18 @@
       font-family:"Arial Narrow";
       font-size:1.5em;
       color:rgb(255,10,255);
-      background-color:black;
+      background-color:rgb(0,0,0);
       padding:20px;
       padding-top:0px;
       padding-bottom:0px;
+      border:5px double rgb(255,0,255);
   }
 
   .credits { 
       font-family:"Arial Narrow";
       font-size:1.2em;
       text-align: center;
-      color:rgb(0,255,0);
+      color:rgb(0,0,255);
       padding-bottom: 5vh;
       margin-left:20vw;
       margin-right:20vw;
@@ -150,11 +151,11 @@
     }
 
   a{
-    color:rgb(255,0,255);
+    color:rgb(0,255,255);
     
   }
   a visited{
-    color:inherit;
+    color:rgb(0,0,255);
   }
   a:hover {
       color: rgb(255,0,0);
@@ -164,6 +165,9 @@
       color: inherit;
   }
 
+::selection{
+  background-color:rgb(0,0,255);
+}
   .mallname{
       font-family: 'Brush Script MT';
       transform: rotate(-7deg);
@@ -176,17 +180,17 @@
     #author {
     font-family:"Snell Roundhand";
       font-size:1em;
-      background-color: rgb(0,0,255);
+      background-color: rgb(255,0,255);
     }
     #date {
       font-family:"Bradley Hand";
       font-size:1em;
-      background-color: rgb(0,0,255);
+      background-color: rgb(255,0,255);
     }
     #source{
       font-family: 'Comic Sans MS';
       font-size: .9em;
-      background-color: rgb(0,0,255);    
+      background-color: rgb(255,0,255);    
     }
 
   /* IMAGES */
