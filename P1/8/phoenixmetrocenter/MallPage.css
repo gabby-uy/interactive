@@ -137,6 +137,7 @@
       padding:20px;
       padding-top:0px;
       padding-bottom:0px;
+      border:4px inset blue;
   }
 
    ::selection{

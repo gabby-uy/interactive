@@ -88,7 +88,8 @@
       margin-right:20vw;
       text-transform: uppercase;
       color:rgb(255,255,0);
-      border: .5vw dotted rgb(255,255,0);
+      padding:2px;
+      border: 5px dotted rgb(255,255,0);
       background-color: rgb(255,0,255);
     }
 

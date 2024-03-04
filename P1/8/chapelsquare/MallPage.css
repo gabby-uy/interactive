@@ -169,6 +169,10 @@
       color: inherit;
   }
 
+::selection{
+  background-color: red;
+}
+
   .mallname{
       font-family: 'Brush Script MT';
       transform: rotate(-7deg);

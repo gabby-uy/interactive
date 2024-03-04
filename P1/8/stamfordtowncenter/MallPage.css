@@ -85,7 +85,7 @@
       margin-left:20vw;
       margin-right:20vw;
       color:yellow;
-      border: .5vw dotted yellow;
+      border: 5px dotted yellow;
       background-color: blue;
     }
     
@@ -135,6 +135,7 @@
       padding:20px;
       padding-top:0px;
       padding-bottom:0px;
+      border:5px ridge rgb(0,0,255);
 
   }
   .credits { 
@@ -163,6 +164,10 @@
       color:rgb(255,0,255);
       animation: blink 0.1s infinite;
     }
+    ::selection{
+  background-color: rgb(255,0,255);
+}
+
     #author {
     font-family:"Snell Roundhand";
       font-size:1em;
