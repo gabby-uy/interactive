@@ -55,6 +55,7 @@ textarea {
   height: 200px;
   background-color: black; /* Customize background color */
   font-family: "ABC Gaisyr Mono Regular", monospace;
+  text-shadow: 0 0 5px rgba(255,255,255,0.8);
   color:white;
   font-size: 20px; /* Customize font size */
   line-height:40px;
