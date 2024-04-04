@@ -87,7 +87,7 @@ textarea {
     font-weight: 200;
     font-style: normal;
     position:fixed;
-    top:25vh;
+    top:15vh;
 }
 
 #time{
@@ -101,7 +101,7 @@ textarea {
     font-weight: 200;
     font-style: normal;
     position:fixed;
-    top:45vh;
+    top:35vh;
 }
 
 #buttontext {
@@ -115,7 +115,7 @@ textarea {
     font-weight: 200;
     font-style: normal;
     position:fixed;
-    top:65vh;
+    top:55vh;
 }
 
 #shakebutton {
@@ -130,6 +130,6 @@ textarea {
     font-weight: 200;
     font-style: normal;
     position:fixed;
-    top:75vh;
+    top:55vh;
     animation: fadeInOut 3s infinite;
 }
