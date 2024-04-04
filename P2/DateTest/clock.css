@@ -36,7 +36,7 @@ body{
     font-family: "ABC Gaisyr Mono Regular", monospace;
     font-weight: 200;
     font-style: normal;
-    animation: fadeInOut 4s infinite;
+    animation: fadeInOut 3s infinite;
 }
 
 /* TEXT BOX STYLING*/
@@ -131,4 +131,5 @@ textarea {
     font-style: normal;
     position:fixed;
     top:75vh;
+    animation: fadeInOut 3s infinite;
 }
