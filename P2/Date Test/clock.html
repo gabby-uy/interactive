@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Time and Date</title>
+    <link rel="stylesheet" href="clock.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+<style type="text/css">
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <p><div id="date"></div></p> 
+  <p><div id="time"></div></p>
+
+  <p><div id="buttontext" onclick="toggleTextBox();hidebuttontext();hidetime();showshakebutton();">Make a Wish</div></p>
+
+  <div id="textBoxContainer" style="display: none;">)
+  <textarea id="userInput" placeholder="Type here..."></textarea>
+
+  <div id="shakebutton" style="display: none;">Shake to Enter Wish</div>
+
+</div>
+
+<script>
+function updateTime() {
+  // Get current date and time
+  var now = new Date();
+  
+  // Format time as hh:mm:ss
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  hours = hours % 12;
+  hours = hours ? hours : 12; // Handle midnight (0 hours)
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+  var timeString = hours + ':' + minutes + ':' + seconds;
+  
+  // Format date as mm:dd:yy
+  var month = now.getMonth() + 1; // Month starts from 0
+  var date = now.getDate();
+  var year = now.getFullYear().toString().slice(-2); // Get last two digits of year
+  var dateString = month + '.' + date + '.' + year;
+  
+  // Update the HTML elements with the time and date
+  document.getElementById('time').innerHTML = timeString;
+  document.getElementById('date').innerHTML = dateString;
+}
+
+// Call updateTime every second to update the time
+setInterval(updateTime, 1000);
+
+//Toggle text box
+function toggleTextBox() {
+  var textBox = document.getElementById('textBoxContainer');
+  textBox.style.display = (textBox.style.display === 'none') ? 'flex' : 'none';
+}
+function hidebuttontext() {
+  var div = document.getElementById('buttontext');
+  div.style.display = 'none'; // Hide the text div
+}
+
+function hidetime() {
+  var div = document.getElementById('time');
+  div.style.display = 'none'; // Hide the time div
+}
+
+function showshakebutton() {
+  var div = document.getElementById('shakebutton');
+  div.style.display = (div.style.display === 'none') ? 'flex' : 'none';
+}
+</script>
+
+</body>
+</html>
