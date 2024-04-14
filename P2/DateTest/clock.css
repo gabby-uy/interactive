@@ -82,6 +82,8 @@ img{
             position:absolute;
             top:30%;
             z-index: 3;
+            opacity: 0; /* Start with opacity 0 to make it invisible */
+            transition: opacity 1s; /* Add transition effect for opacity property */
         }
 
 .container{

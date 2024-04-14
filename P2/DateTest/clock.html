@@ -135,6 +135,7 @@ function enterwish(){
     var randomImage = document.getElementById('randomImage');
     randomImage.src = images[randomIndex];
     randomImage.style.display = 'block';
+    randomImage.style.opacity = '1';
 
     // Remove the event listener for device motion after the button has been clicked once
     window.removeEventListener('devicemotion', handleDeviceMotion);
