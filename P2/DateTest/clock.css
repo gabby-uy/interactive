@@ -68,6 +68,8 @@ textarea {
   padding: 20px; /* Add padding */
   border: none;
   border-radius: 5px; /* Add border radius */
+  outline: none;
+  resize: none;
 
 }
 
@@ -130,7 +132,7 @@ img{
     font-weight: 200;
     font-style: normal;
     position:fixed;
-    top:55vh;
+    top:65vh;
 }
 
 #shakebutton {
@@ -145,6 +147,6 @@ img{
     font-weight: 200;
     font-style: normal;
     position:fixed;
-    top:55vh;
+    top:65vh;
     animation: fadeInOut 3s infinite;
 }

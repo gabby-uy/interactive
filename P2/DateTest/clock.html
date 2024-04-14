@@ -136,13 +136,44 @@ function enterwish(){
     randomImage.src = images[randomIndex];
     randomImage.style.display = 'block';
 
+    // Remove the event listener for device motion after the button has been clicked once
+    window.removeEventListener('devicemotion', handleDeviceMotion);
+
 };
 
-document.addEventListener('keypress', function(event) {
+// Function to handle device motion
+function handleDeviceMotion(event) {
+    var acceleration = event.accelerationIncludingGravity;
+
+    // Calculate total acceleration
+    var accelerationMagnitude = Math.sqrt(
+        Math.pow(acceleration.x, 2) +
+        Math.pow(acceleration.y, 2) +
+        Math.pow(acceleration.z, 2)
+    );
+
+    // Define a threshold for shaking detection
+    var shakeThreshold = 15; // Adjust this value based on sensitivity
+
+    // Check if the device is shaken
+    if (accelerationMagnitude > shakeThreshold) {
+        enterwish();
+    }
+}
+
+// Add event listener for device motion
+window.addEventListener('devicemotion', handleDeviceMotion);
+
+// Function to handle key press
+function handleKeyPress(event) {
     if (event.key === 'Enter' && buttonClicked) {
         enterwish();
     }
-});
+}
+
+// Add event listener for keypress
+document.addEventListener('keypress', handleKeyPress);
+
 </script>
 
 </body>
