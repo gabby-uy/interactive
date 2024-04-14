@@ -121,7 +121,7 @@ img{
 
 #buttontext {
     color:white;
-    font-size:12px;
+    font-size:14px;
     letter-spacing: 2px;
     text-align: center;
     margin: 20px;
@@ -130,12 +130,12 @@ img{
     font-weight: 200;
     font-style: normal;
     position:fixed;
-    top:60vh;
+    top:55vh;
 }
 
 #shakebutton {
     color:white;
-    font-size:12px;
+    font-size:14px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
@@ -145,6 +145,6 @@ img{
     font-weight: 200;
     font-style: normal;
     position:fixed;
-    top:60vh;
+    top:55vh;
     animation: fadeInOut 3s infinite;
 }
