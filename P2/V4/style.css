@@ -1,4 +1,4 @@
-/* RIPPLE STYLING */
+
 @font-face {
   font-family: 'ABC Gaisyr Mono Regular';
   src: url('ABCGaisyr/ABCGaisyrMono-Regular.otf') format('opentype'); /* Specify the path to your font file */
@@ -9,26 +9,69 @@
   src: url('PPSupplyMono/PPSupplyMono-Regular.otf') format('opentype'); /* Specify the path to your font file */
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    /*background: url(water2.png) no-repeat center;*/
-    background-size: cover;
-    background-color:black;
-    position:fixed;
-    z-index: 0;
-}
-
-}
-@font-face {
-  font-family: 'ABC Gaisyr Mono Regular';
-  src: url('ABCGaisyr/ABCGaisyrMono-Regular.otf') format('opentype'); /* Specify the path to your font file */
-}
-
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; } /* Text fully transparent */
   50% { opacity: 1; } /* Text fully opaque */
 }
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position:fixed;
+    z-index: 0;
+    background-color: black;
+}
+
+fieldset {
+  border: none;
+  position:absolute;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+    position:fixed;
+    top:30vh;
+  /*justify-content: center;
+  margin: auto;
+  height: auto;
+  position:fixed;*/
+}
+
+/* TEXT BOX STYLING*/
+#textBoxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  color: black;
+    position:fixed;
+    top:30vh;
+}
+
+
+label {
+  display: none;
+}
+
+button{
+    color:white;
+    background-color: black;
+    box-shadow: none;
+    border:none;
+    font-size:14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 20px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.8); 
+    font-family: "PP Supply Mono Regular", monospace;
+    font-weight: 200;
+    font-style: normal;
+    position:fixed;
+    top:65vh;
+    animation: fadeInOut 3s infinite;
+}
+
 
  #buttontext {
     color:white;
@@ -44,17 +87,6 @@ body{
     animation: fadeInOut 3s infinite;
 }
 
-/* TEXT BOX STYLING*/
-#textBoxContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  color: black;
-    position:fixed;
-    top:30vh;
-}
-
 textarea {
   width: 200px;
   height: 200px;
@@ -65,7 +97,7 @@ textarea {
   font-size: 28px; /* Customize font size */
   line-height:40px;
   text-align: center; /* Customize text alignment */
-  margin:20px;
+  */margin:20px;
   padding: 20px; /* Add padding */
   border: none;
   border-radius: 5px; /* Add border radius */
@@ -76,15 +108,16 @@ textarea {
 
 img{
             display: none;
+  justify-content: center;
+  align-items: center;
             max-width: 100%;
             max-height: 100%;
             width:200px;
             height: auto;
             position:absolute;
             top:30%;
+            margin: 0 auto; /* Position the left edge of the image at the horizontal center */
             z-index: 3;
-            opacity: 0; /* Start with opacity 0 to make it invisible */
-            transition: opacity 1s; /* Add transition effect for opacity property */
         }
 
 .container{
@@ -94,7 +127,6 @@ img{
     align-items: center;
     height: 100vh;
 }
-
 
 #date{
     color:white;
@@ -143,13 +175,39 @@ img{
     font-size:14px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
-    margin: 20px;
     text-shadow: 0 0 5px rgba(255,255,255,0.8); 
     font-family: "PP Supply Mono Regular", monospace;
     font-weight: 200;
     font-style: normal;
-    position:fixed;
-    top:65vh;
+
+    position: absolute;
+    left: 50%; /* Place the left edge of the button at the center of the page */
+    transform: translateX(-65%); /* Move the button left by half of its own width */
+    top: 65vh;
+    text-align: center;
     animation: fadeInOut 3s infinite;
 }
+
+.honeypot-field {
+  display: none;
+
+}
+
+
+
+/*
+.form-elements {
+  border: none;
+  margin:auto;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+.Timestamp {
+  display: none;
+}
+
+*/
+

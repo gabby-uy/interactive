@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11:11</title>
+    <link rel="stylesheet" href="clock.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+<style type="text/css">
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <p><div id="date"></div></p> 
+  <p><div id="time"></div></p>
+
+  <!-- MAKE A WISH -->
+  <p><div id="buttontext" onclick="toggleTextBox();hidebuttontext();hidetime();showshakebutton();">Make a Wish</div></p>
+
+
+<!-- WISH SUBMISSION FORM -->
+ <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbwXK3gMwEnEgW4BGE6myqljDUS-YZlc5zMLs2ewPPglFWL-yhnH7BSYAJGA9auKjxFm/exec">
+
+          <!-- TEXT AREA FOR ENTERING WISH -->
+          <div id="textBoxContainer" style="display: none;">
+          <textarea id="userInput" placeholder="I wish..." onclick="buttonClicked = true;"></textarea>
+
+         <!-- SHAKE/TAP TO WISH -->
+          <div id="shakebutton" style="display: none;" onclick="enterwish()">Shake to Wish</div>
+
+        </div>
+  </form>
+
+<!-- 8 BALL MESSAGE -->
+<img id="randomImage" src="" alt="Random Image">
+
+<script>
+            var buttonClicked = false; 
+
+            function updateTime() {
+              // Get current date and time
+              var now = new Date();
+              
+              // Format time as hh:mm:ss
+              var hours = now.getHours();
+              var minutes = now.getMinutes();
+              var seconds = now.getSeconds();
+              hours = hours % 12;
+              hours = hours ? hours : 12; // Handle midnight (0 hours)
+              minutes = minutes < 10 ? '0' + minutes : minutes;
+              seconds = seconds < 10 ? '0' + seconds : seconds;
+              var timeString = hours + ':' + minutes + ':' + seconds;
+              
+              // Format date as mm:dd:yy
+              var month = now.getMonth() + 1; // Month starts from 0
+              var date = now.getDate();
+              var year = now.getFullYear().toString().slice(-2); // Get last two digits of year
+              var dateString = month + '.' + date + '.' + year;
+              
+              // Update the HTML elements with the time and date
+              document.getElementById('time').innerHTML = timeString;
+              document.getElementById('date').innerHTML = dateString;
+            }
+
+            // Call updateTime every second to update the time
+            setInterval(updateTime, 1000);
+
+            //Toggle text box
+            function toggleTextBox() {
+              var textBox = document.getElementById('textBoxContainer');
+              textBox.style.display = (textBox.style.display === 'none') ? 'flex' : 'none';
+            }
+            function hidebuttontext() {
+              var div = document.getElementById('buttontext');
+              div.style.display = 'none'; // Hide the text div
+            }
+
+            function hidetime() {
+              var div = document.getElementById('time');
+              div.style.display = 'none'; // Hide the time div
+            }
+
+            function showshakebutton() {
+              var div = document.getElementById('shakebutton');
+              div.style.display = (div.style.display === 'none') ? 'flex' : 'none';
+              
+            }
+
+            function enterwish(){
+
+            //Hide all elements on the page
+              var shakebutton =  document.getElementById('shakebutton');
+              shakebutton.style.display = 'none'; // Hide the shakebutton
+
+              var textbox =  document.getElementById('textBoxContainer');
+              textbox.style.display = 'none'; // Hide the text box
+
+              var date = document.getElementById('date');
+              date.style.display = 'none'; // Hide the date
+
+            //Show an 8 Ball Message
+
+            // Array of 8 Ball Message image URLs
+                var images = [
+                    '8BallMessages/Message1.png',
+                    '8BallMessages/Message2.png',
+                    '8BallMessages/Message3.png',
+                    '8BallMessages/Message4.png',
+                    '8BallMessages/Message5.png',
+                    '8BallMessages/Message6.png',
+                    '8BallMessages/Message7.png',
+                    '8BallMessages/Message8.png',
+                    '8BallMessages/Message9.png',
+                    '8BallMessages/Message10.png',
+                    '8BallMessages/Message11.png',
+                    '8BallMessages/Message12.png',
+                    '8BallMessages/Message13.png',
+                    '8BallMessages/Message14.png',
+                    '8BallMessages/Message15.png',
+                    '8BallMessages/Message16.png',
+                    '8BallMessages/Message17.png',
+                    '8BallMessages/Message18.png',
+                    '8BallMessages/Message19.png',
+                    '8BallMessages/Message20.png',
+                    '8BallMessages/Message21.png',
+                    '8BallMessages/Message22.png',
+                    '8BallMessages/Message23.png',
+                    '8BallMessages/Message24.png',
+                    '8BallMessages/Message25.png',
+                    '8BallMessages/Message26.png',
+                ];
+
+                // Get a random index to select a random image from the array
+                var randomIndex = Math.floor(Math.random() * images.length);
+
+                // Display the random image
+                var randomImage = document.getElementById('randomImage');
+                randomImage.src = images[randomIndex];
+                randomImage.style.display = 'block';
+                randomImage.style.opacity = '1';
+
+                // Remove the event listener for device motion after the button has been clicked once
+                window.removeEventListener('devicemotion', handleDeviceMotion);
+
+            };
+
+            // Function to handle device motion
+            function handleDeviceMotion(event) {
+                var acceleration = event.accelerationIncludingGravity;
+
+                // Calculate total acceleration
+                var accelerationMagnitude = Math.sqrt(
+                    Math.pow(acceleration.x, 2) +
+                    Math.pow(acceleration.y, 2) +
+                    Math.pow(acceleration.z, 2)
+                );
+
+                // Define a threshold for shaking detection
+                var shakeThreshold = 5; // Adjust this value based on sensitivity
+
+                // Check if the device is shaken
+                if (accelerationMagnitude > shakeThreshold) {
+                    enterwish();
+                }
+            }
+
+            // Add event listener for device motion
+            window.addEventListener('devicemotion', handleDeviceMotion);
+
+            // Function to handle key press
+            function handleKeyPress(event) {
+                if (event.key === 'Enter' && buttonClicked) {
+                    enterwish();
+                }
+            }
+
+            // Add event listener for keypress
+            document.addEventListener('keypress', handleKeyPress);
+
+</script>
+
+<!-- Submit the Form to Google Using "AJAX" -->
+<script data-cfasync="false" src="submit-data.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+
+  <title>11:11 TEST</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<!--<div>This website posts and displays data from this <a href="https://docs.google.com/spreadsheets/d/1xTFMUrnjtuY2EJ-sdeEitGHvH2HiFSKohAITJsWlWKg/edit?usp=sharing">Google Sheet</a>.</div>-->
+
+
+<div class="container">
+  <p><div id="date"></div></p> 
+  <p><div id="time"></div></p>
+
+  <div onclick="toggleTextBox();hideButtonText();hideTime();showShakeButton();" id="buttontext" > Make a Wish</div>
+
+<!-- change the form action to your script url -->
+<form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbwqm0RG3oUE6DrRM8FcmJerM2B8QXf8gaphVxSKX3VsUtoentqkSLwilzB1BmduuuRl/exec">
+    
+    <!--<div class="form-elements">-->
+
+
+<div id="textBoxContainer" style="display: none;">
+      <fieldset>
+        <label for="wish">Message: </label>
+      <textarea id="userInput" name="wish" rows="10" placeholder="I wish..." onclick="buttonClicked = true;"></textarea>
+      </fieldset>
+</div>
+
+      <fieldset class="honeypot-field">
+        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+        <input id="honeypot" type="text" name="honeypot" value="" />
+      </fieldset>
+
+<div>
+      <button onclick="enterWish()" id="shakebutton" style="display: none;" >
+        Shake to Wish
+      </button>
+</div>
+    <!--</div>-->
+
+
+    <!-- Customise the Thankyou Message People See when they submit the form: 
+    <div class="thankyou_message" style="display:none;">
+      <h2>Thanks for your submission</h2>
+      <div><a href="index.html">See results</a></div>
+    </div> -->
+</form>
+
+<img id="randomImage" src="" alt="Random Image">
+
+</div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" src="submit-data.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+var buttonClicked = false; 
+
+// Function to update time
+function updateTime() {
+    // Get current date and time
+    var now = new Date();
+
+    // Format time as hh:mm:ss
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Handle midnight (0 hours)
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    var timeString = hours + ':' + minutes + ':' + seconds;
+
+    // Format date as mm.dd.yy
+    var month = now.getMonth() + 1; // Month starts from 0
+    var date = now.getDate();
+    var year = now.getFullYear().toString().slice(-2); // Get last two digits of year
+    var dateString = month + '.' + date + '.' + year;
+
+    // Update the HTML elements with the time and date
+    document.getElementById('time').innerHTML = timeString;
+    document.getElementById('date').innerHTML = dateString;
+}
+
+// Call updateTime initially to display the date and time
+updateTime();
+
+// Call updateTime every second to update the time
+setInterval(updateTime, 1000);
+
+// Function to toggle text box
+    function toggleTextBox() {
+        var textBox = document.getElementById('textBoxContainer');
+        textBox.style.display = (textBox.style.display === 'none') ? 'flex' : 'none';
+    }
+
+    // Function to hide button text
+    function hideButtonText() {
+        var div = document.getElementById('buttontext');
+        div.style.display = 'none';
+    }
+
+    // Function to hide time
+    function hideTime() {
+        var div = document.getElementById('time');
+        div.style.display = 'none';
+    }
+
+    // Function to show shake button
+    function showShakeButton() {
+        var div = document.getElementById('shakebutton');
+        div.style.display = (div.style.display === 'none') ? 'flex' : 'none';
+    }
+
+    // Function to handle wish submission
+    function enterWish() {
+        // Your code to handle wish submission goes here
+  
+//Hide all elements on the page
+  var shakebutton =  document.getElementById('shakebutton');
+  shakebutton.style.display = 'none'; // Hide the shakebutton
+
+  var textbox =  document.getElementById('textBoxContainer');
+  textbox.style.display = 'none'; // Hide the text box
+
+  var date = document.getElementById('date');
+  date.style.display = 'none'; // Hide the date
+
+  //Show an 8 Ball Message
+
+// Array of 8 Ball Message image URLs
+    var images = [
+        '8BallMessages/Message1.png',
+        '8BallMessages/Message2.png',
+        '8BallMessages/Message3.png',
+        '8BallMessages/Message4.png',
+        '8BallMessages/Message5.png',
+        '8BallMessages/Message6.png',
+        '8BallMessages/Message7.png',
+        '8BallMessages/Message8.png',
+        '8BallMessages/Message9.png',
+        '8BallMessages/Message10.png',
+        '8BallMessages/Message11.png',
+        '8BallMessages/Message12.png',
+        '8BallMessages/Message13.png',
+        '8BallMessages/Message14.png',
+        '8BallMessages/Message15.png',
+        '8BallMessages/Message16.png',
+        '8BallMessages/Message17.png',
+        '8BallMessages/Message18.png',
+        '8BallMessages/Message19.png',
+        '8BallMessages/Message20.png',
+        '8BallMessages/Message21.png',
+        '8BallMessages/Message22.png',
+        '8BallMessages/Message23.png',
+        '8BallMessages/Message24.png',
+        '8BallMessages/Message25.png',
+        '8BallMessages/Message26.png',
+    ];
+
+    // Get a random index to select a random image from the array
+    var randomIndex = Math.floor(Math.random() * images.length);
+
+    // Display the random image
+    var randomImage = document.getElementById('randomImage');
+    randomImage.src = images[randomIndex];
+    randomImage.style.display = 'block';
+    randomImage.style.opacity = '1';
+
+    // Remove the event listener for device motion after the button has been clicked once
+    window.removeEventListener('devicemotion', handleDeviceMotion);
+};
+
+// Function to handle device motion
+function handleDeviceMotion(event) {
+    var acceleration = event.accelerationIncludingGravity;
+
+    // Calculate total acceleration
+    var accelerationMagnitude = Math.sqrt(
+        Math.pow(acceleration.x, 2) +
+        Math.pow(acceleration.y, 2) +
+        Math.pow(acceleration.z, 2)
+    );
+
+    // Define a threshold for shaking detection
+    var shakeThreshold = 5; // Adjust this value based on sensitivity
+
+    // Check if the device is shaken
+    if (accelerationMagnitude > shakeThreshold) {
+        enterWish();
+    }
+}
+
+// Add event listener for device motion
+window.addEventListener('devicemotion', handleDeviceMotion);
+
+// Function to handle key press
+function handleKeyPress(event) {
+    if (event.key === 'Enter' && buttonClicked) {
+        document.getElementById('shakebutton').click();
+    }
+}
+
+// Add event listener for keypress
+document.addEventListener('keypress', handleKeyPress);
+
+
+// Function to check the current time and show/hide the "Make a Wish" button accordingly
+function updateButtonVisibility() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var isPM = hours >= 12; // Check if it's PM
+
+    var body = document.body;
+
+    // Convert hours to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Handle midnight (0 hours)
+
+
+    // Check if the current time is 11:11
+    if (hours === 11 && minutes === 11 && isPM) {
+        document.getElementById('buttontext').style.display = 'block'; // Show the button
+        body.style.backgroundColor = "black";
+
+
+    } else {
+        document.getElementById('buttontext').style.display = 'none'; // Hide the button
+        document.getElementById('date').style.color = 'black'
+        document.getElementById('time').style.color = 'black'
+        body.style.backgroundColor = "white";
+
+    }
+}
+
+
+
+// Call updateButtonVisibility initially to set the initial state of the button
+updateButtonVisibility();
+
+
+</script>
+
+  
+</body>
+</html>

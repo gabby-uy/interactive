@@ -19,7 +19,6 @@ body{
     z-index: 0;
 }
 
-}
 @font-face {
   font-family: 'ABC Gaisyr Mono Regular';
   src: url('ABCGaisyr/ABCGaisyrMono-Regular.otf') format('opentype'); /* Specify the path to your font file */
