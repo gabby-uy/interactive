@@ -88,6 +88,26 @@ button{
     animation: fadeInOut 3s infinite;
 }
 
+#allwishes {
+    color:black;
+    font-size:12px;
+    text-transform: uppercase;
+    letter-spacing:2pt;
+    text-align: center;
+    margin: 20px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.8); 
+    font-family: "PP Supply Mono Regular", monospace;
+    font-weight: 200;
+    font-style: normal;
+    animation: fadeInOut 3s infinite;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+
 textarea {
   width: 200px;
   height: 200px;
@@ -108,7 +128,7 @@ textarea {
 }
 
 img{
-            display: none;
+  display: none;
   justify-content: center;
   align-items: center;
             max-width: 100%;
@@ -118,6 +138,8 @@ img{
             position:absolute;
             top:30%;
             margin: 0 auto; /* Position the left edge of the image at the horizontal center */
+            opacity: 0; /* Set initial opacity to 0 */
+            transition: opacity 0.5s ease-in-out; /* Add a transition effect */
             z-index: 3;
         }
 
@@ -169,6 +191,25 @@ img{
     font-style: normal;
     position:fixed;
     top:65vh;
+}
+
+#allwishes {
+    color:black;
+    font-size:14px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 20px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.8); 
+    font-family: "PP Supply Mono Regular", monospace;
+    font-weight: 200;
+    font-style: normal;
+
+    position: absolute;
+    left: 50%; /* Place the left edge of the button at the center of the page */
+    transform: translateX(-70%); /* Move the button left by half of its own width */
+    top: 65vh;
+    text-align: center;
+    animation: fadeInOut 3s infinite;
 }
 
 #shakebutton {

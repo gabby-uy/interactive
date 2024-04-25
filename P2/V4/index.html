@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
 
 
-  <title>11:11 TEST</title>
+  <title>11:11 </title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,6 +26,8 @@
   <p><div id="time"></div></p>
 
   <div onclick="toggleTextBox();hideButtonText();hideTime();showShakeButton();" id="buttontext" > Make a Wish</div>
+
+  <div> <a href="https://docs.google.com/spreadsheets/d/1xTFMUrnjtuY2EJ-sdeEitGHvH2HiFSKohAITJsWlWKg/edit#gid=0" target="_blank" id="allwishes"> All Wishes </a> </div>
 
 <!-- change the form action to your script url -->
 <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
@@ -184,11 +186,29 @@ setInterval(updateTime, 1000);
     var randomImage = document.getElementById('randomImage');
     randomImage.src = images[randomIndex];
     randomImage.style.display = 'block';
-    randomImage.style.opacity = '1';
+    fadeIn(randomImage);
 
     // Remove the event listener for device motion after the button has been clicked once
     window.removeEventListener('devicemotion', handleDeviceMotion);
 };
+
+
+function fadeIn(element) {
+    var op = 0.1; // initial opacity
+    var targetOpacity = 1; // target opacity
+    var totalSteps = 50; // total number of steps for the animation
+    var duration = 3000; // duration of the fade-in animation in milliseconds
+    var increment = (targetOpacity - op) / totalSteps; // opacity increment per step
+    var intervalTime = duration / totalSteps; // interval time between opacity updates
+
+    var timer = setInterval(function() {
+        if (op >= targetOpacity) {
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        op += increment;
+    }, intervalTime);
+}
 
 // Function to handle device motion
 function handleDeviceMotion(event) {
@@ -224,6 +244,8 @@ function handleKeyPress(event) {
 document.addEventListener('keypress', handleKeyPress);
 
 
+
+
 // Function to check the current time and show/hide the "Make a Wish" button accordingly
 function updateButtonVisibility() {
     var now = new Date();
@@ -241,8 +263,8 @@ function updateButtonVisibility() {
     // Check if the current time is 11:11
     if (hours === 11 && minutes === 11 && isPM) {
         document.getElementById('buttontext').style.display = 'block'; // Show the button
+        document.getElementById('allwishes').style.display = 'none'
         body.style.backgroundColor = "black";
-
 
     } else {
         document.getElementById('buttontext').style.display = 'none'; // Hide the button
@@ -252,7 +274,6 @@ function updateButtonVisibility() {
 
     }
 }
-
 
 
 // Call updateButtonVisibility initially to set the initial state of the button
