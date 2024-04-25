@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gabby's Ambient Website</title>
+
+  <style type="text/css">
+
+/* BASIC STAR */
+.star_5 {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  display: block;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid rgb(100,255,255);
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
+
+.star_5:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -45px;
+  left: -65px;
+  border-bottom: 80px solid rgb(100,255,255);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: 0;
+  transform: rotate(-35deg);
+}
+.star_5:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid rgb(100,255,255);
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+}.star_5 {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  display: block;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid rgb(100,255,255);
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
+
+.star_5:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -45px;
+  left: -65px;
+  border-bottom: 80px solid rgb(100,255,255);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: 0;
+  transform: rotate(-35deg);
+}
+.star_5:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid rgb(100,255,255);
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+}
+
+
+/* CUSTOM STAR */
+.custom_star {
+  transform: scale(.25,.25);
+  display:flex;
+  flex-direction: column;
+  transition: filter 0.3s ease;
+}
+
+.custom_star:hover {
+  transform: scale(.25,.25);
+  display:flex;
+  flex-direction: column;
+  filter: blur(10px);
+}
+
+/* BACKGROUND */
+body {
+  background: linear-gradient(to bottom, rgb(0,0,0), orchid);
+    height: 100vh;
+    margin: 0;
+}
+  </style>
+}
+
+</head>
+<body>
+
+
+
+
+<!-- STARS --> 
+<div class="star_5 custom_star blur"
+  style="
+    position: absolute;
+    top: 10vh;
+    left:10vw;
+    transform-origin: center;
+    ">
+</div>
+<div class="star_5 custom_star blur"
+  style="
+    position: absolute;
+    top: 20vh;
+    left:50vw;
+    ">
+</div>
+
+<div class="star_5 custom_star blur"
+  style="
+    position: absolute;
+    top: 30vh;
+    left:30vw;
+    ">
+</div>
+
+<div class="star_5 custom_star blur"
+  style="
+    position: absolute;
+    top: 5vh;
+    left:120vw;
+    ">
+</div>
+
+<div class="star_5 custom_star"
+  style="
+    position: absolute;
+    top: 10vh;
+    left:80vw;
+    ">
+</div>
+
+<div class="star_5 custom_star"
+  style="
+    position: absolute;
+    top: 40vh;
+    left:90vw;
+    ">
+</div>
+
+<div class="star_5 custom_star"
+  style="
+    position: absolute;
+    top: 20vw;
+    left:80vh;
+    ">
+</div>
+
+<div class="star_5 custom_star"
+  style="
+    position: absolute;
+    top: 80vh;
+    left:20vw;
+    ">
+</div>
+
+<div class="star_5 custom_star"
+  style="
+    position: absolute;
+    top: 80vh;
+    left:90vw;
+    ">
+</div>
+
+<div class="star_5 custom_star"
+  style="
+    position: absolute;
+    top: 60vh;
+    left:70vw;
+    ">
+</div>
+
+<div class="star_5 custom_star"
+  style="
+    position: absolute;
+    top:20vw;
+    left:5vw;
+    ">
+</div>
+
+</body>
